@@ -48,6 +48,12 @@ class LinkedList
     end
     nil
   end
+
+  def pop
+    curr = head
+    curr = curr.next_node until curr.next_node.next_node.nil?
+    curr.next_node = nil
+  end
 end
 
 class Node
@@ -75,6 +81,9 @@ linked_list.prepend(5)
 
 # p linked_list.tail
 # puts linked_list.tail
+# p linked_list
+# p linked_list.size
+# puts linked_list.at(0)
+
+linked_list.pop
 p linked_list
-p linked_list.size
-puts linked_list.at(0)
