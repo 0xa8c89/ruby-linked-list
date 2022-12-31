@@ -82,6 +82,19 @@ class LinkedList
   end
 
   def to_s
+    return 'nil' if head.nil?
+
+    curr = head
+    r_string = ''
+    loop do
+      r_string << "#{curr.value} -> "
+      if curr.next_node.nil?
+        r_string << 'nil'
+        break
+      end
+      curr = curr.next_node
+    end
+    r_string
   end
 end
 
@@ -99,7 +112,7 @@ linked_list = LinkedList.new
 linked_list.append(10)
 linked_list.append(20)
 linked_list.append(30)
-# p linked_list
+p linked_list
 
 linked_list.prepend(5)
 # p linked_list
@@ -108,13 +121,14 @@ linked_list.prepend(5)
 
 # puts linked_list.head
 
-# p linked_list.tail
-# puts linked_list.tail
-# p linked_list
-# p linked_list.size
-# puts linked_list.at(0)
+p linked_list.tail
+puts linked_list.tail
+p linked_list
+p linked_list.size
+puts linked_list.at(0)
 
 # linked_list.pop
 p linked_list
 # p linked_list.contains?(30)
-p linked_list.find(50)
+# p linked_list.find(50)
+p linked_list.to_s
