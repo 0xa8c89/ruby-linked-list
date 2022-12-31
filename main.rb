@@ -96,6 +96,12 @@ class LinkedList
     end
     r_string
   end
+
+  def insert_at(value, index)
+  end
+
+  def remove_at(index)
+  end
 end
 
 class Node
@@ -108,27 +114,31 @@ class Node
   end
 end
 
-linked_list = LinkedList.new
-linked_list.append(10)
-linked_list.append(20)
-linked_list.append(30)
-p linked_list
+# linked_list = LinkedList.new
+# linked_list.append(10)
+# linked_list.append(20)
+# linked_list.append(30)
+# p linked_list
 
-linked_list.prepend(5)
+# linked_list.prepend(5)
 # p linked_list
 
 # p linked_list.size
 
 # puts linked_list.head
 
-p linked_list.tail
-puts linked_list.tail
-p linked_list
-p linked_list.size
-puts linked_list.at(0)
+# p linked_list.tail
+# puts linked_list.tail
+# p linked_list
+# p linked_list.size
+# puts linked_list.at(0)
 
 # linked_list.pop
-p linked_list
+# p linked_list
 # p linked_list.contains?(30)
 # p linked_list.find(50)
-p linked_list.to_s
+# p linked_list.to_s
+
+# puts linked_list
+# linked_list.remove_at(2)
+# puts linked_list
