@@ -54,6 +54,18 @@ class LinkedList
     curr = curr.next_node until curr.next_node.next_node.nil?
     curr.next_node = nil
   end
+
+  def contains?(value)
+    curr = head
+
+    loop do
+      return true if curr.value == value
+      break if curr.next_node.nil?
+
+      curr = curr.next_node
+    end
+    false
+  end
 end
 
 class Node
@@ -85,5 +97,6 @@ linked_list.prepend(5)
 # p linked_list.size
 # puts linked_list.at(0)
 
-linked_list.pop
+# linked_list.pop
 p linked_list
+p linked_list.contains?(30)
