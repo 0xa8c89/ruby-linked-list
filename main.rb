@@ -66,6 +66,23 @@ class LinkedList
     end
     false
   end
+
+  def find(value)
+    curr = head
+    count = 0
+
+    loop do
+      return count if curr.value == value
+      break if curr.next_node.nil?
+
+      curr = curr.next_node
+      count += 1
+    end
+    nil
+  end
+
+  def to_s
+  end
 end
 
 class Node
@@ -99,4 +116,5 @@ linked_list.prepend(5)
 
 # linked_list.pop
 p linked_list
-p linked_list.contains?(30)
+# p linked_list.contains?(30)
+p linked_list.find(50)
