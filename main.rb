@@ -6,7 +6,7 @@ class LinkedList
   end
 
   def append(value)
-    return self.head = Node.new(value) if @head.nil?
+    return self.head = Node.new(value) if head.nil?
 
     curr = head
     curr = curr.next_node until curr.next_node.nil?
