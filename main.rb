@@ -37,6 +37,17 @@ class LinkedList
     curr
   end
 
+  def at(index)
+    count = 0
+    curr = head
+    until curr.nil?
+      return curr if count.equal?(index)
+
+      count += 1
+      curr = curr.next_node
+    end
+    nil
+  end
 end
 
 class Node
@@ -53,14 +64,17 @@ linked_list = LinkedList.new
 linked_list.append(10)
 linked_list.append(20)
 linked_list.append(30)
-p linked_list
+# p linked_list
 
 linked_list.prepend(5)
+# p linked_list
+
+# p linked_list.size
+
+# puts linked_list.head
+
+# p linked_list.tail
+# puts linked_list.tail
 p linked_list
-
 p linked_list.size
-
-puts linked_list.head
-
-p linked_list.tail
-puts linked_list.tail
+puts linked_list.at(0)
